@@ -172,6 +172,44 @@ Once the environment and database are set up, you can run the application with t
     This will show all rows and all columns stored in the item table.
     
     This is the step that actually displays your saved content.
+8. **Aceess items in database in Portgres**
+
+  
+  -- Connect to your database
+\c my_database
+
+-- List all tables
+\dt
+
+-- View all saved content in the table
+SELECT * FROM item;
+
+-- View content by ID
+SELECT * FROM item WHERE id = 1;
+SELECT * FROM item WHERE id = 2;
+SELECT * FROM item WHERE id = 3;
+SELECT * FROM item WHERE id = 4;
+SELECT * FROM item WHERE id = 5;
+SELECT * FROM item WHERE id = 6;
+
+-- View content by name
+SELECT * FROM item WHERE name = 'Laptop';
+SELECT * FROM item WHERE name = 'Jacket';
+SELECT * FROM item WHERE name = 'Pencil';
+SELECT * FROM item WHERE name = 'Table';
+
+-- Search inside descriptions
+SELECT * FROM item WHERE description ILIKE '%work%';
+SELECT * FROM item WHERE description ILIKE '%wear%';
+SELECT * FROM item WHERE description ILIKE '%stationary%';
+
+-- View table structure (columns)
+\d item
+
+-- Count rows in the table
+SELECT COUNT(*) FROM item;
+
+   
 
 ## License
 
