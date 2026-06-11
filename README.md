@@ -143,6 +143,28 @@ Once the environment and database are set up, you can run the application with t
 
    The application will start, and you can access it via the specified host and port in your configuration.
 
+3. **To conect datbase in Postgres**
+
+   \c my_database
+   
+5. **To view table data in Postgres**
+
+    \dt
+    This shows:
+    
+    Schema: public (table type)
+    
+    Table: item (table name)
+    
+    So your database has one table called item.
+   
+6. **To view thw table content in Postgres**
+
+    SELECT * FROM item;
+    This will show all rows and all columns stored in the item table.
+    
+    This is the step that actually displays your saved content.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
