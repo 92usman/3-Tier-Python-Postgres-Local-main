@@ -175,14 +175,23 @@ Once the environment and database are set up, you can run the application with t
 8. **Aceess items in database in Portgres**
 
   
-  -- Connect to your database
-\c my_database
+  Connect to your database
+  ```bash
+   \c my_database
+   ```
 
--- List all tables
-\dt
 
--- View all saved content in the table
-SELECT * FROM item;
+List all tables
+```bash
+   \dt
+   ```
+
+
+View all saved content in the table
+
+```bash
+   \SELECT * FROM item;
+   ```
 
 -- View content by ID
 SELECT * FROM item WHERE id = 1;
