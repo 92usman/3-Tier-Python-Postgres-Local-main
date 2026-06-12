@@ -145,7 +145,7 @@ Once the environment and database are set up, you can run the application with t
 
 3. **To conect datbase in Postgres**
 
-```bash
+   ```bash
    \c my_database
    ```
    
@@ -181,8 +181,8 @@ Once the environment and database are set up, you can run the application with t
    ```
 
 
-List all tables
-```bash
+  List all tables
+  ```bash
    \dt
    ```
 
@@ -193,30 +193,31 @@ View all saved content in the table
    \SELECT * FROM item;
    ```
 
--- View content by ID
-SELECT * FROM item WHERE id = 1;
-SELECT * FROM item WHERE id = 2;
-SELECT * FROM item WHERE id = 3;
-SELECT * FROM item WHERE id = 4;
-SELECT * FROM item WHERE id = 5;
-SELECT * FROM item WHERE id = 6;
+View content by ID
 
--- View content by name
-SELECT * FROM item WHERE name = 'Laptop';
-SELECT * FROM item WHERE name = 'Jacket';
-SELECT * FROM item WHERE name = 'Pencil';
-SELECT * FROM item WHERE name = 'Table';
+```bash
+   \SELECT * FROM item WHERE id = 1;
+    SELECT * FROM item WHERE id = 2;
+    SELECT * FROM item WHERE id = 3; - (Id e index search in the database) -
+   ```
 
--- Search inside descriptions
-SELECT * FROM item WHERE description ILIKE '%work%';
-SELECT * FROM item WHERE description ILIKE '%wear%';
-SELECT * FROM item WHERE description ILIKE '%stationary%';
+View content by name
+```bash
+   \SELECT * FROM item WHERE name = 'Laptop';
+    SELECT * FROM item WHERE name = 'Jacket'; - (name search in side the database) - 
+   ```
 
--- View table structure (columns)
-\d item
+Search inside descriptions
+```bash
+   \SELECT * FROM item WHERE description ILIKE '%wear%';
+    SELECT * FROM item WHERE description ILIKE '%stationary%'; - (word search in the database) - 
+   ```
 
--- Count rows in the table
-SELECT COUNT(*) FROM item;
+View table structure (columns)
+```bash
+   \d item 
+   ```
+
 
    
 
